@@ -6,6 +6,11 @@ variable "yc_cloud_id" {
   default = ""
 }
 
+
+variable "service_account_key_file" {
+  default = ""
+}
+
 variable "yc_folder_id" {
   default = ""
 }
