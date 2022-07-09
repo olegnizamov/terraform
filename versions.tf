@@ -4,5 +4,14 @@ terraform {
       source = "yandex-cloud/yandex"
     }
   }
-  required_version = ">= 0.13"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "olegnizamov"
+
+    workspaces {
+      name = "my-app-prod"
+    }
+  }
+  
+  required_version = ">= 0.14"
 }
